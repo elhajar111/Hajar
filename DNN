@@ -1,0 +1,5 @@
+import tensorflow as tf
+import numpy as np
+filename_queue = tf.train.string_input_producer(['Coverage5.csv'], num_epochs=1, shuffle=False)
+reader = tf.TextLineReader()
+key, value = reader.read(filename_queue)
